@@ -27,6 +27,11 @@ npm run export                    # → exports/<FR>/<id>--<mobile|desktop>.png 
 npm run export -- fr02 --mobile   # filter by id prefix / device
 ```
 
+## Deploy
+
+Deployed on Vercel from GitHub. `vercel.json` rewrites every path to `index.html` so client-side
+routes (`/board`, `/start/about`, `/careers/...`) resolve on direct load and inside board frames.
+
 ## Structure
 
 ```
