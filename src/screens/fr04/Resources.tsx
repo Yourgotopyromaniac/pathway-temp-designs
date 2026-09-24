@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { BookOpen, CheckCircle2, ExternalLink, FileText, Flag, MonitorPlay, MousePointerClick, NotebookText, X } from 'lucide-react'
+import { BookOpen, CircleCheck, ExternalLink, FileText, Flag, MonitorPlay, MousePointerClick, NotebookText, X } from 'lucide-react'
 import { useState } from 'react'
 import { useParams, useSearchParams } from 'react-router'
 import { BackLink, Page } from '@/components/layout/AppShell'
@@ -102,7 +102,7 @@ function ResourceCard({ resource: r, reported, onReport }: { resource: LearningR
       <div className="mt-4 flex flex-col-reverse gap-3 border-t border-line pt-4 sm:flex-row sm:items-center sm:justify-between">
         {reported ? (
           <span className="inline-flex items-center gap-1.5 text-xs text-success-700">
-            <CheckCircle2 className="size-3.5" /> Thanks, we’ll review this resource
+            <CircleCheck className="size-3.5" /> Thanks, we’ll review this resource
           </span>
         ) : (
           <button onClick={onReport} className="inline-flex items-center gap-1.5 self-start text-xs text-ink-subtle hover:text-ink-muted hover:underline">

@@ -40,7 +40,7 @@ export default function Board() {
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3 px-6 py-3">
           <div className="flex items-center gap-3">
             <Logo />
-            <span className="text-sm text-ink-subtle">Reference designs · Career Catalogue MVP</span>
+            <span className="text-sm text-ink-subtle">Reference designs · Career Catalogue MVP · hover an icon for its Lucide name</span>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             {(['all', ...Object.keys(FR_TITLES)] as (FR | 'all')[]).map((f) => (

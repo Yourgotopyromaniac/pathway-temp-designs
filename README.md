@@ -43,6 +43,19 @@ src/screens/fr0X/   one folder per functional requirement
 src/board/          design board + registry of screens/states (also drives the exporter)
 ```
 
+## Icons
+
+All icons are [Lucide](https://lucide.dev). **Hover any icon** (in the prototype or inside a board
+frame) to see its component name. The names are the same on both platforms:
+
+| Platform | Package | Example |
+|---|---|---|
+| Web (React) | `lucide-react` | `import { CircleCheck } from 'lucide-react'` |
+| Mobile (Expo) | `lucide-react-native` + `react-native-svg` (`npx expo install react-native-svg`) | `import { CircleCheck } from 'lucide-react-native'` |
+
+These designs use v1.48. Stay on the same major version so icon names match: older names like
+`CheckCircle2` survive only as deprecated aliases.
+
 ## Forcing states
 
 Any screen URL accepts:

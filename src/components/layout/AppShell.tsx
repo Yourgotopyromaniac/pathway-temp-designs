@@ -3,6 +3,7 @@ import { ChevronLeft, LayoutGrid } from 'lucide-react'
 import type { ReactNode } from 'react'
 import { Link, Outlet, useSearchParams } from 'react-router'
 import { Logo } from '@/components/ui/Logo'
+import { IconTooltips } from './IconTooltips'
 
 /** True when rendered inside a design-board frame / export — hides dev chrome. */
 export function useIsFramed() {
@@ -34,6 +35,7 @@ export function AppShell() {
           </nav>
         </div>
       </header>
+      <IconTooltips />
       <main className="flex-1">
         <Outlet />
       </main>

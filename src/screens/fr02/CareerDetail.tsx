@@ -1,4 +1,4 @@
-import { CheckCircle2, MapPin, Route } from 'lucide-react'
+import { CircleCheck, MapPin, Route } from 'lucide-react'
 import type { ReactNode } from 'react'
 import { useParams } from 'react-router'
 import { BackLink, Page, useCarryParams } from '@/components/layout/AppShell'
@@ -50,7 +50,7 @@ function Detail({ career }: { career: Career }) {
         <ul className="grid gap-2">
           {career.workActivities.map((a) => (
             <li key={a} className="flex gap-3">
-              <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-brand-600" />
+              <CircleCheck className="mt-0.5 size-5 shrink-0 text-brand-600" />
               <span>{a}</span>
             </li>
           ))}

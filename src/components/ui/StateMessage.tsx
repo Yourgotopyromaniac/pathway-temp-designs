@@ -1,10 +1,10 @@
 import clsx from 'clsx'
-import { AlertTriangle, Inbox, Loader2, SearchX } from 'lucide-react'
+import { TriangleAlert, Inbox, LoaderCircle, SearchX } from 'lucide-react'
 import type { ReactNode } from 'react'
 
 type Kind = 'loading' | 'empty' | 'no-match' | 'error'
 
-const icons = { loading: Loader2, empty: Inbox, 'no-match': SearchX, error: AlertTriangle }
+const icons = { loading: LoaderCircle, empty: Inbox, 'no-match': SearchX, error: TriangleAlert }
 
 /** Shared pattern for loading / empty / error states across all FRs. */
 export function StateMessage({
