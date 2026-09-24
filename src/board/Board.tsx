@@ -63,21 +63,21 @@ export default function Board() {
       <div className="px-6 pb-24">
         {groups.map((g) => (
           <section key={g} className="pt-10">
-            <h2 className="font-display text-2xl font-semibold">
+            <h2 className="text-center font-display text-2xl font-semibold">
               <span className="text-brand-700">{g}</span> · {FR_TITLES[g]}
             </h2>
             <div className="mt-6 grid gap-12">
               {BOARD.filter((e) => e.fr === g).map((e) => (
                 <article key={e.id} id={e.id}>
-                  <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <div className="mb-3 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1">
                     <h3 className="font-semibold">{e.title}</h3>
                     <code className="text-xs text-ink-subtle">{e.id}</code>
                     <a href={e.path} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs text-brand-700 hover:underline">
                       Open live <ExternalLink className="size-3" />
                     </a>
                   </div>
-                  {e.note && <p className="-mt-1 mb-3 max-w-3xl text-sm text-ink-muted">{e.note}</p>}
-                  <div className="flex items-start gap-6 overflow-x-auto pb-2">
+                  {e.note && <p className="-mt-1 mx-auto mb-3 max-w-3xl text-center text-sm text-ink-muted">{e.note}</p>}
+                  <div className="flex items-start justify-center-safe gap-6 overflow-x-auto pb-2">
                     {devices.map((d) => (
                       <Frame key={d} device={d} src={framedUrl(e.path)} zoom={zoom} />
                     ))}
