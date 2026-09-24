@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+@import '@fontsource-variable/figtree';
+@import '@fontsource-variable/google-sans-flex';
+@import './tokens.css';
+
+/*
+ * shadcn/ui components (src/components/shadcn) read these semantic variables.
+ * They're mapped onto Pathway tokens so shadcn never introduces its own
+ * palette — change colors in tokens.css, not here.
+ */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: var(--color-canvas);
+  --foreground: var(--color-ink);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-ink);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-ink);
+  --primary: var(--color-brand-500);
+  --primary-foreground: var(--color-ink-inverse);
+  --secondary: var(--color-grey-50);
+  --secondary-foreground: var(--color-ink-muted);
+  --muted: var(--color-grey-50);
+  --muted-foreground: var(--color-ink-muted);
+  /* shadcn "accent" = hovered/focused menu item, not Pathway's orange accent ramp */
+  --accent: var(--color-brand-50);
+  --accent-foreground: var(--color-brand-800);
+  --destructive: var(--color-danger-600);
+  --border: var(--color-line);
+  --input: var(--color-line);
+  --ring: var(--color-brand-500);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+}
